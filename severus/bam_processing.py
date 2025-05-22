@@ -87,9 +87,9 @@ def get_segment(read, genome_id,sv_size,use_supplementary_tag, ref_ind):
         is_primary = True
 
     num_of_mismatch = 0
-    if read.has_tag('NM')
+    if read.has_tag('NM'):
         nm = read.get_tag('NM')
-    else
+    else:
         nm = 0
     indel = [b for a, b in cigar if a in [CIGAR_INS, CIGAR_DEL]]
     num_of_mismatch = nm - sum(indel)
